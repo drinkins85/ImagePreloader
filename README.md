@@ -26,9 +26,9 @@ imgManager.getUrl('url', progressFunc, callbackFunc);
 
 **url** (string) -  path to image
 
-**progressFunc** (function) - get progress(number from 0 to 100) as argument. Used for render progress bar.
+**progressFunc** (function) - gets progress (number from 0 to 100) as argument. Used to render progress bar.
 
-**callbackFunc** (function) - get Image object as argument/ Used for render image
+**callbackFunc** (function) - gets Image object as argument. Used to render image
 
 ### Example
 
@@ -79,7 +79,7 @@ imgManager.getUrl('img/pic_1.jpg', loadProgress, showImage);
 
 <!-- JS code here -->
 
-<!-- For old browsers need Promise and Fetch polyfills -->
+<!-- For old browsers needs Promise and Fetch polyfills -->
 <script src="promise-polyfill.js"></script>
 <script src="fetch-polyfill.js"></script>
 <script src="imagePreloader.js" defer></script>
