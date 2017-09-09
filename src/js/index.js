@@ -1,15 +1,18 @@
 const IMManager = new imageManager();
 
-// функция отображения загрузчика
+// loadIndicator
 let loadProgress = function(progress, id){
     let loadIndicator = document.getElementById(id).querySelector('.load-indicator');
-    loadIndicator.style.width = progress + '%';
+    let progressBar = loadIndicator.querySelector('.progress-bar');
+    let progressPc = loadIndicator.querySelector('.progress-pc');
+    progressBar.style.width = progress + '%';
+    progressPc.innerHTML = progress + '%';
     if (progress === 100){
         loadIndicator.classList.add('hidden');
     }
 };
 
-// callback получает на вход объект img или null в случае ошибки
+// callback
 let showImage = function(img, id){
     if (img){
         document.getElementById(id).appendChild(img);
@@ -20,13 +23,5 @@ let showImage = function(img, id){
 
 let gallery = document.getElementById('gallery');
 
-for (let i=0; i<15; i++){
-    let imgcontainer = document.createElement('div');
-    imgcontainer.classList.add('img-container');
-    imgcontainer.setAttribute('id',`img_${i}`);
-    let loader = document.createElement('div');
-    loader.classList.add('load-indicator');
-    imgcontainer.appendChild(loader);
-    gallery.appendChild(imgcontainer);
-    IMManager.getUrl(`img/IMG_${i}.jpg`, (progress)=>loadProgress(progress, `img_${i}`), (img)=>showImage(img, `img_${i}`));
-}
+IMManager.getUrl(`img/IMG_1.jpg`, (progress)=>loadProgress(progress, `img_1`), (img)=>showImage(img, `img_1`));
+IMManager.getUrl(`img/IMG_2.jpg`, (progress)=>loadProgress(progress, `img_2`), (img)=>showImage(img, `img_2`));

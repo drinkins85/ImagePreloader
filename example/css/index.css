@@ -1,0 +1,36 @@
+#gallery {
+    text-align: center;
+}
+
+.img-container {
+
+    box-sizing: border-box;
+    width: 300px;
+    height: 200px;
+    background-color: aliceblue;
+    float: left;
+    margin: 10px;
+}
+
+.img-container img {
+    width: 300px;
+    height: 200px;
+}
+
+.load-indicator .progress-bar{
+    background-color: cadetblue;
+    height: 3px;
+    width: 0;
+
+}
+
+.load-indicator .progress-pc{
+    font-size: 2em;
+    color: lightgrey;
+    text-align: center;
+    padding: 20px;
+}
+
+.hidden{
+    display: none;
+}
