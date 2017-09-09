@@ -3,7 +3,7 @@
 Image preloader with progress bar.
 Use FETCH for preload images. Work only for CORS requests.
 
-[Demo]:http://this.drinkins.com/image-preloader/
+[Demo](http://this.drinkins.com/image-preloader/)
 
 ## Usage
 
@@ -25,9 +25,7 @@ imgManager.getUrl('url', progressFunc, callbackFunc);
 ```
 
 **url** (string) -  path to image
-
 **progressFunc** (function) - get progress(number from 0 to 100) as argument. Used for render progress bar.
-
 **callbackFunc** (function) - get Image object as argument/ Used for render image
 
 ### Example
